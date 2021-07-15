@@ -15,11 +15,11 @@ public class HomeController {
 
     @GetMapping(value = "/test/v1")
     public ActionResult test1() {
-        return new ActionResult(true, new Date().toString());
+        return new ActionResult(true, new Date().toString(), null);
     }
 
     @GetMapping(value = "/test/v2")
     public ResponseEntity<ActionResult> test2() {
-        return ResponseEntity.ok(new ActionResult(true, new Date().toString()));
+        return ResponseEntity.ok(new ActionResult(true, new Date().toString(), null));
     }
 }
